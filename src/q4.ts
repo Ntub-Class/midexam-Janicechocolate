@@ -5,8 +5,17 @@
 // 提示: String.includes, String.split
 
 
-let calc = function (calcString: string) {
-
+let calc = (calcString: string) => {
+    let s1: string[] = calcString.split('');
+    if (s1[1] === '*') {
+        console.log(Number(s1[0]) * Number(s1[2]));
+    } else if (s1[1] === '+') {
+        console.log(Number(s1[0]) + Number(s1[2]));
+    } else if (s1[1] === '/') {
+        console.log(Number(s1[0]) / Number(s1[2]));
+    } else {
+        console.log(Number(s1[0]) - Number(s1[2]));
+    }
 }
 
 calc('8*2')

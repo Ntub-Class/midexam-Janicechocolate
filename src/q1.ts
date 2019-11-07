@@ -3,8 +3,14 @@
 // 參數說明: content: 文章, keyword: 想要計算出現在文章內的字
 // 輸出說明: 請回傳出現次數
 
-let calcWord = function (content: string, keyword: string) {
-
+let calcWord = (content: string, keyword: string) => {
+    let count = 0;
+    for (let i = 0; i <= content.length; i++) {
+        if (content.charAt(i) === keyword) {
+            count++;
+        }
+    }
+    console.log(count);
 }
 
 console.log(calcWord('Abcdaaeafga', 'a')) // 4
